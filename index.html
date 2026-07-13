@@ -9,6 +9,7 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 680px; margin: 0 auto; padding: 40px 20px; }
         h1 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
         h2 { font-size: 18px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
+        h3 { font-size: 15px; font-weight: 600; margin-top: 20px; margin-bottom: 8px; }
         p, li { font-size: 15px; margin-bottom: 12px; color: #333; }
         ul { padding-left: 20px; }
         .subtitle { font-size: 14px; color: #666; margin-bottom: 32px; }
@@ -26,34 +27,74 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Stone Bicycle Coalition iOS App — Effective April 1, 2026</p>
+    <p class="subtitle">Stone Bicycle Coalition iOS App — Effective April 1, 2026 · Last Updated July 13, 2026</p>
 
     <h2>Overview</h2>
-    <p>Stone Bicycle Coalition ("the App") is a free community app for cyclists. We are committed to protecting your privacy. This policy explains what data the App collects and how it is used.</p>
+    <p>Stone Bicycle Coalition ("the App") is a free community cycling app. Your privacy matters. This policy explains what the App does with your data.</p>
+    <p><strong>The short version:</strong> Your data stays on your device. The App collects nothing — no accounts, no analytics, no ads, no trackers — and sends no personal data to our servers. We never sell your data.</p>
 
-    <h2>Data We Do Not Collect</h2>
-    <p>The App does not collect, store, or transmit any personal data. Specifically:</p>
+    <h2>Data Stored Locally on Your Device</h2>
     <ul>
-        <li>No account creation or login required</li>
-        <li>No personal information collected (name, email, phone)</li>
-        <li>No location tracking or GPS data stored</li>
-        <li>No analytics or usage tracking</li>
-        <li>No cookies or advertising identifiers</li>
-        <li>No data shared with third parties</li>
+        <li><strong>Ride recordings</strong> — GPS tracks, distance, elevation, and duration from rides you record</li>
+        <li><strong>Expedition journal entries</strong> — photos, notes, audio, and GPS data you capture during rides</li>
+        <li><strong>User preferences</strong> — app settings, onboarding state, favorite routes</li>
+        <li><strong>Ride history</strong> — session counts, total miles, and season statistics</li>
+    </ul>
+    <p>This data stays on your device and is <strong>not</strong> transmitted to us or anyone else. We do not operate any server that receives personal data from the App.</p>
+
+    <h2>Co-op Edition Features (turned off in this app)</h2>
+    <p>Stone Bicycle Coalition publishes an open-source toolkit so other bike co-ops can build their own edition of the app. Two optional features in that toolkit — <strong>member sign-in</strong> (which would email you a sign-in link) and <strong>route submission</strong> (which would send a route you recorded to the co-op for review) — transmit data to a server only if a co-op enables them. Both are turned <strong>off</strong> in the Stone Bicycle Coalition edition, and neither can be switched on from inside the app. If a co-op edition you use enables either one, that co-op's own privacy policy will describe it.</p>
+
+    <h2>Permissions the App Requests</h2>
+
+    <h3>Location (Optional)</h3>
+    <ul>
+        <li>Used to record GPS tracks during rides and show your position on route maps</li>
+        <li>Location data is stored <strong>only on your device</strong>. It leaves the device only if you deliberately connect a third-party route provider or tap a trail-conditions lookup (see "Third-Party Services")</li>
+        <li>You can deny location permission and still browse routes, bikes, events, and community content</li>
+        <li>Background location is used only during active ride recording with a visible notification</li>
+        <li>Rally Radio can optionally share your live position with nearby riders peer-to-peer (default off) — this goes device-to-device only and never reaches our servers</li>
     </ul>
 
-    <h2>Rally Radio (Voice Chat)</h2>
-    <p>Rally Radio uses Apple's MultipeerConnectivity framework for peer-to-peer voice chat between nearby devices. Audio is transmitted directly between devices on the local network and is never recorded, stored, or sent to any server. No audio data leaves your local network.</p>
-    <p>The App requests microphone access solely for Rally Radio voice chat. You can deny this permission and still use all other features.</p>
+    <h3>Camera (Optional)</h3>
+    <ul>
+        <li>Used to capture photos for expedition journal entries; photos are stored locally on your device</li>
+        <li>You can deny camera permission and still use all other app features</li>
+    </ul>
 
-    <h2>Local Network Access</h2>
-    <p>The App requests local network access to discover nearby devices for Rally Radio. This uses Apple's Bonjour protocol and does not involve any external servers.</p>
+    <h3>Nearby Devices / Local Network (Rally Radio)</h3>
+    <ul>
+        <li>Rally Radio uses Apple's MultipeerConnectivity framework for peer-to-peer push-to-talk voice chat during group rides</li>
+        <li>Audio and any shared position travel directly device-to-device on the local network — no data passes through any server, nothing is recorded or stored, and no accounts or identities are created</li>
+    </ul>
 
-    <h2>Data Storage</h2>
-    <p>All app content (bike listings, routes, events, community posts) is bundled within the app. No data is stored on external servers. If WordPress sync is enabled by the app operator, the app fetches publicly available content from a WordPress website — no user data is sent.</p>
+    <h2>Data We Do NOT Collect</h2>
+    <ul>
+        <li>No name, email, phone number, or address</li>
+        <li>No device identifiers or fingerprinting</li>
+        <li>No usage analytics or telemetry</li>
+        <li>No crash reporting to external services</li>
+        <li>No advertising identifiers</li>
+        <li>No cookies or web tracking</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>The App does <strong>not</strong> integrate with any third-party analytics, advertising, or tracking services. The only external connections are:</p>
+    <ul>
+        <li><strong>Map tiles</strong> (MapLibre / OpenStreetMap) — loaded from public tile servers when viewing route maps. No personal data is sent.</li>
+        <li><strong>WordPress content</strong> (optional) — the App may fetch public community posts and events from stonebicyclecoalition.com. No personal data is sent.</li>
+        <li><strong>Route &amp; trail providers</strong> (optional, user-initiated) — if you look up trail conditions or connect a route provider, the App may send the route's location to services such as the U.S. Forest Service, Trailforks, Strava, Wahoo, or Ride with GPS to fetch conditions or sync routes. These run only when you request them; provider accounts require your authorization and their credentials are stored in the device Keychain.</li>
+        <li><strong>App Store</strong> — for download and updates (managed by Apple).</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p>We do not share, sell, rent, or trade your personal data with any third party.</p>
+
+    <h2>Data Retention and Deletion</h2>
+    <p>All data is stored locally on your device. Deleting the App (iOS: Settings &gt; General &gt; iPhone Storage &gt; StoneBC &gt; Delete App) permanently removes it. Because the App sends us no personal data, there is nothing on our side to delete. (If you use a co-op edition that enabled route submission or member sign-in and want data removed from that co-op's server, contact that co-op.)</p>
 
     <h2>Children's Privacy</h2>
-    <p>The App does not knowingly collect any information from children under 13. The App contains no user-generated content, accounts, or data collection mechanisms.</p>
+    <p>The App is not directed at children under 13 and we do not knowingly collect information from children. The App contains no user accounts, no social features requiring personal data, and no data collection mechanisms that could inadvertently capture children's data.</p>
 
     <h2>Changes to This Policy</h2>
     <p>We may update this policy from time to time. Changes will be posted on this page with an updated effective date.</p>

@@ -27,7 +27,7 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Stone Bicycle Coalition iOS App — Effective April 1, 2026 · Last Updated July 13, 2026</p>
+    <p class="subtitle">Stone Bicycle Coalition iOS App — Effective April 1, 2026 · Last Updated October 30, 2026</p>
 
     <h2>Overview</h2>
     <p>Stone Bicycle Coalition ("the App") is a free community cycling app. Your privacy matters. This policy explains what the App does with your data.</p>
@@ -62,10 +62,19 @@
         <li>You can deny camera permission and still use all other app features</li>
     </ul>
 
-    <h3>Nearby Devices / Local Network (Rally Radio)</h3>
+    <h3>Nearby Devices / Local Network and Microphone (Rally Radio)</h3>
     <ul>
-        <li>Rally Radio uses Apple's MultipeerConnectivity framework for peer-to-peer push-to-talk voice chat during group rides</li>
+        <li>Rally Radio uses Apple's MultipeerConnectivity framework and your microphone for peer-to-peer push-to-talk voice chat during group rides</li>
         <li>Audio and any shared position travel directly device-to-device on the local network — no data passes through any server, nothing is recorded or stored, and no accounts or identities are created</li>
+        <li>Your group shares a ride code. Only phones with the same code can hear you or see a position you choose to share; everything sent is encrypted with a key made from that code. Share the code in person.</li>
+    </ul>
+
+    <h3>Apple Health (Optional)</h3>
+    <ul>
+        <li>If you allow it, the App reads cycling workouts (route, heart rate, cadence, power, calories) and heart-rate variability, and can save your rides to Health as workouts</li>
+        <li>Health data stays on your device. It is never sent to us and the App does not put it in iCloud Drive</li>
+        <li>Rides imported from Health and your daily recovery journal (practices, HRV, reflections, voice notes) are excluded from iCloud/device backups. Rides you record in the App are included in your own device backup, because they are the only copy</li>
+        <li>Earlier versions (up to 0.90 build 2) copied the daily recovery journal to your own iCloud Drive. That no longer happens; More → Mission Control can delete the journal on this device and, separately, remove copies an older version left in iCloud Drive. Copies already inside an older iCloud Backup can't be removed by the App</li>
     </ul>
 
     <h2>Data We Do NOT Collect</h2>
@@ -81,7 +90,8 @@
     <h2>Third-Party Services</h2>
     <p>The App does <strong>not</strong> integrate with any third-party analytics, advertising, or tracking services. The only external connections are:</p>
     <ul>
-        <li><strong>Map tiles</strong> (MapLibre / OpenStreetMap) — loaded from public tile servers when viewing route maps. No personal data is sent.</li>
+        <li><strong>Apple Maps (MapKit)</strong> — in-app maps and map images on shared ride cards are drawn by Apple Maps, which receives the map area being shown. Ride cards default to "Stats only", which requests no map.</li>
+        <li><strong>Map tiles</strong> (MapLibre / OpenStreetMap) — loaded from public tile servers when viewing route maps or downloading offline packs. The requests reveal the area being viewed; no account or personal identifier is sent.</li>
         <li><strong>WordPress content</strong> (optional) — the App may fetch public community posts and events from stonebicyclecoalition.com. No personal data is sent.</li>
         <li><strong>Route &amp; trail providers</strong> (optional, user-initiated) — if you look up trail conditions or connect a route provider, the App may send the route's location to services such as the U.S. Forest Service, Trailforks, Strava, Wahoo, or Ride with GPS to fetch conditions or sync routes. These run only when you request them; provider accounts require your authorization and their credentials are stored in the device Keychain.</li>
         <li><strong>App Store</strong> — for download and updates (managed by Apple).</li>
@@ -89,6 +99,7 @@
 
     <h2>Data Sharing</h2>
     <p>We do not share, sell, rent, or trade your personal data with any third party.</p>
+    <p>When <em>you</em> share a ride card or export a ride file, the App by default removes the first and last 250 m of the track and any privacy zone you set. Sending the exact route, start and finish is a separate, clearly labelled choice.</p>
 
     <h2>Data Retention and Deletion</h2>
     <p>All data is stored locally on your device. Deleting the App (iOS: Settings &gt; General &gt; iPhone Storage &gt; StoneBC &gt; Delete App) permanently removes it. Because the App sends us no personal data, there is nothing on our side to delete. (If you use a co-op edition that enabled route submission or member sign-in and want data removed from that co-op's server, contact that co-op.)</p>
